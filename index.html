@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shashank ❤️ Bhumi</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #c471ed);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -50px;
+    font-size: 25px;
+    animation: float 8s linear infinite;
+    opacity: 0.8;
+    z-index: 0;
+}
+
+.heart:nth-child(1) { left: 5%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 20%; animation-delay: 2s; }
+.heart:nth-child(3) { left: 40%; animation-delay: 4s; }
+.heart:nth-child(4) { left: 60%; animation-delay: 1s; }
+.heart:nth-child(5) { left: 80%; animation-delay: 3s; }
+.heart:nth-child(6) { left: 92%; animation-delay: 5s; }
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Glass cards */
+.card {
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 40px 25px;
+    margin: 25px 0;
+    box-shadow: 0 15px 40px rgba(80,0,50,0.2);
+}
+
+/* Opening */
+.small {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    margin: 15px 0;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.names {
+    font-size: 1.4rem;
+    margin: 15px 0;
+}
+
+.big-heart {
+    font-size: 75px;
+    display: inline-block;
+    animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+    0%,100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+p {
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+/* Special quote */
+.quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Journey */
+.journey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.place {
+    background: rgba(255,255,255,0.18);
+    padding: 18px;
+    border-radius: 20px;
+    min-width: 130px;
+}
+
+.place .emoji {
+    font-size: 35px;
+}
+
+.line {
+    font-size: 30px;
+}
+
+/* Reasons */
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.reason {
+    background: rgba(255,255,255,0.14);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.reason span {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Button */
+button {
+    border: none;
+    padding: 16px 30px;
+    border-radius: 40px;
+    background: white;
+    color: #ed4775;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+/* Secret message */
+#secret {
+    display: none;
+    margin-top: 30px;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signature {
+    font-size: 1.5rem;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 30px;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Mobile */
+@media(max-width:600px) {
+    .card {
+        padding: 32px 18px;
+    }
+
+    .quote {
+        font-size: 1.25rem;
+    }
+
+    .line {
+        transform: rotate(90deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<div class="heart">❤️</div>
+<div class="heart">💗</div>
+<div class="heart">💕</div>
+<div class="heart">💖</div>
+<div class="heart">💘</div>
+<div class="heart">💞</div>
+
+<div class="container">
+
+    <!-- Opening -->
+    <div class="card">
+
+        <div class="small">A little surprise for my girl</div>
+
+        <div class="big-heart">❤️</div>
+
+        <h1>Bhumi</h1>
+
+        <div class="names">
+            <b>Shashank</b> ❤️ <b>Bhumi</b>
+        </div>
+
+        <p>
+            Happy GF Day, my beautiful girl. 🥹💕
+        </p>
+
+        <br>
+
+        <p>
+            It's crazy to think that we've only been
+            together for one month...
+            yet somehow, you've already become
+            such a special part of my life.
+        </p>
+
+    </div>
+
+
+    <!-- One month -->
+    <div class="card">
+
+        <h2>🌷 One Month of Us 🌷</h2>
+
+        <br>
+
+        <p>
+            One month may sound small to the world,
+            but to me, every conversation,
+            every late-night chat,
+            every laugh and every little moment
+            with you matters.
+        </p>
+
+        <br>
+
+        <div class="quote">
+            "We may be far from each other,
+            but you're never far from my heart."
+        </div>
+
+    </div>
+
+
+    <!-- Long distance -->
+    <div class="card">
+
+        <h2>🌙 Our Little Long-Distance Story</h2>
+
+        <br>
+
+        <p>
+            The funniest and most beautiful thing
+            about us is that...
+        </p>
+
+        <br>
+
+        <h2>We haven't even met yet. 🥹❤️</h2>
+
+        <br>
+
+        <p>
+            We've never held hands.
+            <br>
+            We've never gone on a date.
+            <br>
+            We've never sat beside each other.
+            <br><br>
+
+            But somehow, you've still managed
+            to make me smile through a screen.
+        </p>
+
+        <br>
+
+        <p>
+            And honestly, I can't wait for the day
+            when the distance between us becomes
+            just a memory.
+        </p>
+
+    </div>
+
+
+    <!-- The first meeting -->
+    <div class="card">
+
+        <h2>✨ One Day...</h2>
+
+        <div class="journey">
+
+            <div class="place">
+                <div class="emoji">📱</div>
+                <br>
+                <b>Today</b>
+                <br>
+                Talking through a screen
+            </div>
+
+            <div class="line">❤️</div>
+
+            <div class="place">
+                <div class="emoji">🤝</div>
+                <br>
+                <b>Someday</b>
+                <br>
+                Finally meeting you
+            </div>
+
+        </div>
+
+        <p>
+            One day I'll finally see you in front of me
+            instead of seeing you through my phone.
+        </p>
+
+        <br>
+
+        <p>
+            And when that day comes,
+            I hope our first "hello" makes up for
+            all the "I wish you were here" moments.
+            🥺❤️
+        </p>
+
+    </div>
+
+
+    <!-- Why Bhumi -->
+    <div class="card">
+
+        <h2>💗 Why You're Special</h2>
+
+        <div class="reasons">
+
+            <div class="reason">
+                <span>😊</span>
+                You make me smile
+            </div>
+
+            <div class="reason">
+                <span>🌙</span>
+                You make my nights better
+            </div>
+
+            <div class="reason">
+                <span>💬</span>
+                I love talking to you
+            </div>
+
+            <div class="reason">
+                <span>🫶</span>
+                You make me feel special
+            </div>
+
+            <div class="reason">
+                <span>💕</span>
+                You are becoming my favorite person
+            </div>
+
+            <div class="reason">
+                <span>♾️</span>
+                I want to see where "us" goes
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Secret letter -->
+    <div class="card">
+
+        <h2>💌 Bhumi, I wrote something for you...</h2>
+
+        <p>
+            Tap the button below.
+        </p>
+
+        <button onclick="openLetter()">
+            Open My Heart ❤️
+        </button>
+
+        <div id="secret">
+
+            <br><br>
+
+            <p>
+                Dear Bhumi,
+                <br><br>
+
+                Happy GF Day to the girl who somehow
+                became so important to me in just one month. ❤️
+                <br><br>
+
+                I know we're far away from each other,
+                and I know we've never even met in person.
+                But what we have feels special to me.
+                <br><br>
+
+                Every notification from you can put a smile
+                on my face. Every conversation gives me
+                another reason to look forward to tomorrow.
+                <br><br>
+
+                I don't know exactly what the future holds,
+                but I know one thing...
+                <br><br>
+
+                <b>
+                I want to make more memories with you.
+                </b>
+                <br><br>
+
+                I want our first meeting.
+                <br>
+                Our first hug.
+                <br>
+                Our first real date.
+                <br>
+                Our first picture together.
+                <br>
+                And all the little moments that we haven't
+                experienced yet.
+                🥹❤️
+                <br><br>
+
+                Until then, I'll keep loving you from
+                wherever I am and reminding you that
+                you're special to me.
+                <br><br>
+
+                One month down...
+                <br>
+                and hopefully many beautiful chapters
+                still waiting for us.
+                ❤️
+            </p>
+
+            <div class="signature">
+                Forever yours,<br>
+                Shashank ❤️
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Ending -->
+    <div class="card">
+
+        <div class="big-heart">💖</div>
+
+        <h2>Happy GF Day, Bhumi</h2>
+
+        <br>
+
+        <p>
+            Distance is only a number.
+            <br>
+            Until we meet, I'll keep choosing you.
+        </p>
+
+        <br>
+
+        <div class="quote">
+            "Maybe our story started online,
+            but I hope someday we get to live
+            the best parts of it together."
+        </div>
+
+        <div class="footer">
+            Made with all my heart ❤️<br>
+            Shashank → Bhumi
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function openLetter() {
+
+    const letter = document.getElementById("secret");
+
+    if (letter.style.display === "block") {
+        letter.style.display = "none";
+    } else {
+        letter.style.display = "block";
+
+        // little heart burst
+        for (let i = 0; i < 12; i++) {
+
+            const heart = document.createElement("div");
+
+            heart.innerHTML = "❤️";
+
+            heart.style.position = "fixed";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.top = "70vh";
+            heart.style.fontSize = (15 + Math.random() * 25) + "px";
+            heart.style.zIndex = "100";
+            heart.style.pointerEvents = "none";
+            heart.style.transition = "all 2s ease";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.style.top = (20 + Math.random() * 40) + "vh";
+                heart.style.opacity = "0";
+                heart.style.transform =
+                    "translateX(" +
+                    (Math.random() * 200 - 100) +
+                    "px) rotate(360deg)";
+            }, 50);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 2100);
+        }
+    }
+}
+
+</script>
+
+</body>
+</html>
